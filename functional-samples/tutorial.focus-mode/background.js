@@ -22,7 +22,6 @@ const extensions = 'https://developer.chrome.com/docs/extensions';
 const webstore = 'https://developer.chrome.com/docs/webstore';
 const amazon = 'https://www.amazon.com';
 
-console.log("This is a popup!");
 
 // When the user clicks on the extension action
 chrome.action.onClicked.addListener(async (tab) => {
@@ -101,5 +100,19 @@ chrome.action.onClicked.addListener((tab) => {
       target: { tabId: tab.id },
       function: reddenPage
     });
+    chrome.scripting.executeScript({
+      target: { tabId: tab.id },
+      function: yellowPage
+    });
+
   }
 });
+
+function yellowPage() {
+  var elements = document.getElementsByClassName("a-size-base po-break-word");
+    
+  for(var i = 0; i < 1; i++) {
+      elements[i].style.backgroundColor = "yellow";
+      console.log(elements[i].innerHTML);
+  }
+}
