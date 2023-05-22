@@ -21,6 +21,7 @@ chrome.runtime.onInstalled.addListener(() => {
 const extensions = 'https://developer.chrome.com/docs/extensions';
 const webstore = 'https://developer.chrome.com/docs/webstore';
 const amazon = 'https://www.amazon.com';
+const walmart = 'https://www.walmart.com';
 
 
 // When the user clicks on the extension action
