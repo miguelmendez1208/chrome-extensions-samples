@@ -141,6 +141,20 @@ chrome.runtime.onInstalled.addListener(() => {
     for(var i = 0; i < 1; i++) {
         elements[i].style.backgroundColor = "yellow";
         console.log(elements[i].innerHTML);
+        var key_Element = elements[i].innerHTML;
+        /*
+        fetch('http://your-java-backend-endpoint', {
+        method: 'POST', // or 'GET', 'PUT', etc.
+        headers: {
+        'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ key: key_Element }), // data can be `string` or {object}!
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch((error) => console.error('Error:', error));
+        */
+       console.log("clpAlgorithm(" + key_Elemen + ")");
     }
   }
 
